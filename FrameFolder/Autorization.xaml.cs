@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_FinalEX.ClassesFolder;
+using WPF_FinalEX.FrameFolder;
 
 namespace WPF_FinalEX.FrameFolder
 {
@@ -23,6 +25,18 @@ namespace WPF_FinalEX.FrameFolder
         public Autorization()
         {
             InitializeComponent();
+        }
+
+        private void BAuto_Click(object sender, RoutedEventArgs e)
+        {
+            if (TBOXLog.Text =="admin" && TBOXPass.Text == "admin")
+            {
+                NavigationClass.frame.Navigate(new MainFrame());
+            }
+            if (TBOXLog.Text == "a" && TBOXPass.Text == "a") 
+            {
+
+            }
         }
     }
 }

@@ -9,5 +9,11 @@
                 <Setter Property="FontFamily" Value="Comic Sans MS"/>
             </Style.Setters>
         </Style>
+
+        <Style TargetType="TextBlock">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            </Style.Setters>
+        </Style>
     </Application.Resources>
 </Application>

@@ -9,7 +9,28 @@
       Title="Autorization" 
       >
 
-    <Grid>
-        <TextBox Foreground="red" Text="Боба" Background="Transparent"/>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel
+            Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>
+                    <TextBlock.Text>
+                        Логин
+                    </TextBlock.Text>
+                </TextBlock>
+                <TextBox x:Name="TBOXLog" Width="100"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>
+                    <TextBlock.Text>
+                        Пароль
+                    </TextBlock.Text>
+                </TextBlock>
+                <TextBox x:Name="TBOXPass" Width="100"/>
+            </StackPanel>
+            <Button x:Name="BAuto" Click="BAuto_Click"> Зайти </Button>
+        </StackPanel>
+       
     </Grid>
 </Page>

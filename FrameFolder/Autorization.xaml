@@ -9,7 +9,7 @@
       Title="Autorization" 
       >
 
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid x:Name="Pupa"  HorizontalAlignment="Center" VerticalAlignment="Center">
         <StackPanel
             Orientation="Vertical">
             <StackPanel Orientation="Horizontal">

@@ -6,9 +6,45 @@
       xmlns:local="clr-namespace:WPF_FinalEX.FrameFolder"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MainFrame" Background="Green">
+      Title="MainFrame">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Vertical">
+            <Button x:Name="Bup" Content="^" Click="Bup_Click"></Button>
+            <Button x:Name="Bdown" Content="v" Click="Bdown_Click"></Button>
+
+            <ComboBox Name="Sort" ToolTip="Сортрровка" SelectionChanged="Sort_SelectionChanged">
+                <ComboBoxItem Content="Имя"/>
+                <ComboBoxItem Content="Мин. цена"/>
+            </ComboBox>
+
+            <ComboBox Name="Filt" ToolTip="Фильтрация" SelectionChanged="Filt_SelectionChanged">
+                <ComboBoxItem Content="первый"/>
+                <ComboBoxItem Content="второй"/>
+            </ComboBox>
+        </StackPanel>
         
+        <ListView Height="300" Name="LVMaterials" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"  SelectionMode="Single">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border  BorderBrush="Black" Background="Aqua" BorderThickness="2">
+                        <StackPanel Width="700" Orientation="Vertical">
+                            <TextBlock Text="{Binding TableTitle}"/>
+                            <TextBlock Text="{Binding ArticleNumber}"/>
+                            <TextBlock TextWrapping="Wrap"  Text="{Binding Materialsss}"/>
+                            <TextBlock TextWrapping="Wrap"  Text="{Binding AllCoast}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
+
+    
 </Page>

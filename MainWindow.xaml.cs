@@ -32,7 +32,7 @@ namespace WPF_FinalEX
             DateTime date1 = new DateTime(2010, 1, 1, 8, 0, 15);
             DateTime date2 = new DateTime(2010, 1, 1, 10, 6, 50);
             timeSpan = date2 - date1;
-            NavigationClass.frame.Navigate(new Autorization());
+            NavigationClass.frame.Navigate(new MainFrame());
         }
     }
 }
